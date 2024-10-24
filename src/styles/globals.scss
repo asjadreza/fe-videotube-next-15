@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// src/styles/globals.scss
+
+// Import Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// Your other global styles
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+html.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 17, 24, 39;
+  --background-end-rgb: 17, 24, 39;
+}
+
+body {
+  min-height: 100vh;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// Override Bootstrap's default background colors in dark mode
+html.dark {
+  .bg-light {
+    background-color: #1f2937 !important;
+  }
+  
+  .bg-white {
+    background-color: #111827 !important;
+  }
+  
+  .text-dark {
+    color: #f3f4f6 !important;
+  }
+  
+  // Add more Bootstrap overrides as needed
+}
+
+// user channel styles 
+
+.custom-tab {
+  background: none;
+  border: none;
+}
